@@ -1,0 +1,42 @@
+{
+  "name": "auth-uber-cad",
+  "version": "1.0.0",
+  "license": "Apache License 2.0",
+  "description": "Foxx authorization service for uberCad.",
+  "thumbnail": "files/favicon.png",
+  "keywords": ["cad", "authorization", "service"],
+  "author": "Thermevo",
+  "contributors": [
+    {
+      "name": "Gary",
+      "email": "netzver@gmail.com"
+    },
+    {
+      "name": "Volodymyr Shcherbyna",
+      "email": "vladimshc@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+
+  "engines": {
+    "arangodb": "^3.0.0"
+  },
+  "main": "index.js",
+
+  "scripts": {
+    "setup": "scripts/setup.js"
+  },
+  "defaultDocument": "index.html",
+  "files": {
+    "/index.html": {
+      "path": "files/index.html"
+    },
+    "/favicon.png": {
+      "path": "files/favicon.png"
+    }
+  },
+  "lib": "."
+}
