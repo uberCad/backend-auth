@@ -5,7 +5,6 @@ const createAuth = require('@arangodb/foxx/auth');
 const createRouter = require('@arangodb/foxx/router');
 const sessionsMiddleware = require('@arangodb/foxx/sessions');
 const accessToken = require('./accessToken');
-const crypto = require('@arangodb/crypto');
 let request = require('@arangodb/request');
 const errors = require('@arangodb').errors;
 const DOC_NOT_FOUND = errors.ERROR_ARANGO_DOCUMENT_NOT_FOUND.code;
@@ -177,7 +176,7 @@ router.get('/access', function (req, res) {
         res.throw(404, 'The entry does not exist', e);
     }
 })
-    .response(joi.string().required(), 'Return google bearer authorization token.')
+    .response('Return google bearer authorization token.')
     .summary('Get google authorization token.')
     .description('Returns google authorization token for get data from google spreadsheets.');
 
